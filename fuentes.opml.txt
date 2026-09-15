@@ -1,0 +1,8 @@
+<opml version="1.0">
+  <body>
+    <outline text="Evaluación Tecnológica y Ciencia">
+      <outline text="Rathenau Instituut" xmlUrl="https://www.rathenau.nl/en/rss"/>
+      <outline text="STOA - Parlamento Europeo" xmlUrl="https://www.europarl.europa.eu/rss/doc/stoa/en.xml"/>
+    </outline>
+  </body>
+</opml>
