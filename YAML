@@ -1,0 +1,22 @@
+name: Horizon Scanning Semanal
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Ejecución todos los lunes a las 08:00 hrs
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Instalar dependencias
+        run: pip install feedparser
+      - name: Ejecutar Scanner
+        run: python scanner.py
+      - name: Guardar Reporte
+        uses: actions/upload-artifact@v3
+        with:
+          name: Reporte-Legislativo
+          path: reporte_legislativo.txt
